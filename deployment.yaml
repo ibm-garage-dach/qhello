@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qhello
+spec:
+  selector:
+    matchLabels:
+      app: qhello
+  template:
+    metadata:
+      labels:
+        app: qhello
+    spec:
+      containers:
+        - name: qhello
+          image: us.icr.io/co-operators-bootcamp/qhello:1
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
