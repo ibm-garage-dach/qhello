@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: qhello
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: qhello
