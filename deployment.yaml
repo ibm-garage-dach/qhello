@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: qhello
-          image: us.icr.io/co-operators-bootcamp/qhello:1
+          image: us.icr.io/dom-test/qhello:1
           resources:
             limits:
               memory: "128Mi"
